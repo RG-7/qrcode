@@ -3,30 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR Code Generator</title>
+    <title>QR Code Generator | Free Online QR Code Maker</title>
+    <meta name="description" content="Generate high-quality QR codes instantly for any URL. Free, fast, and easy QR code generator with download and copy options. Perfect for sharing links, business cards, and more.">
+    <meta name="keywords" content="QR code, QR generator, free QR code, online QR code, QR code maker, download QR, copy QR, share QR">
+    <link rel="canonical" href="https://qr.ratn.dev/">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="QR Code Generator | Free Online QR Code Maker">
+    <meta property="og:description" content="Generate high-quality QR codes instantly for any URL. Free, fast, and easy QR code generator with download and copy options.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qr.ratn.dev/">
+    <meta property="og:image" content="https://qr.ratn.dev/og-image.png">
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="QR Code Generator | Free Online QR Code Maker">
+    <meta name="twitter:description" content="Generate high-quality QR codes instantly for any URL. Free, fast, and easy QR code generator with download and copy options.">
+    <meta name="twitter:image" content="https://qr.ratn.dev/og-image.png">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a class="github-link" href="https://github.com/RG-7/qrcode" target="_blank" title="View on GitHub">
-        <svg class="github-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="#222" d="M12 2C6.477 2 2 6.484 2 12.012c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.37-1.342-3.37-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.091-.646.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.254-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.025 2.747-1.025.546 1.378.202 2.396.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.579.688.481C19.138 20.19 22 16.436 22 12.012 22 6.484 17.523 2 12 2Z"/></svg>
-        GitHub
-    </a>
+    <header>
+        <a class="github-link" href="https://github.com/RG-7/qrcode" target="_blank" title="View on GitHub">
+            <svg class="github-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="#222" d="M12 2C6.477 2 2 6.484 2 12.012c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.013-1.703-2.782.605-3.37-1.342-3.37-1.342-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.833.091-.646.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.254-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.295 2.747-1.025 2.747-1.025.546 1.378.202 2.396.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.579.688.481C19.138 20.19 22 16.436 22 12.012 22 6.484 17.523 2 12 2Z"/></svg>
+            GitHub
+        </a>
+    </header>
     <div class="grid-bg"></div>
-    <div class="qr-content">
-        <form id="qr-form" class="qr-form-center">
-            <label for="qr-url" class="form-label">Enter URL to generate QR code</label>
-            <input type="url" id="qr-url" class="form-input" placeholder="Paste your URL here..." required>
-        </form>
-        <div class="qr-preview-card" id="qr-preview-card" style="display:none; flex-direction:column; align-items:center;">
-            <div class="qr-preview" id="qr-preview"></div>
-            <div class="qr-options" id="qr-options">
-                <button class="qr-btn" data-format="png">PNG</button>
-                <button class="qr-btn" data-format="jpg">JPG</button>
-                <button class="qr-btn" id="copy-img">Copy</button>
+    <main>
+        <section class="qr-content">
+            <form id="qr-form" class="qr-form-center">
+                <label for="qr-url" class="form-label">Enter URL to generate QR code</label>
+                <input type="url" id="qr-url" class="form-input" placeholder="Paste your URL here..." required>
+            </form>
+            <div class="qr-preview-card" id="qr-preview-card" style="display:none; flex-direction:column; align-items:center;">
+                <div class="qr-preview" id="qr-preview"></div>
+                <div class="qr-options" id="qr-options">
+                    <button class="qr-btn" data-format="png">PNG</button>
+                    <button class="qr-btn" data-format="jpg">JPG</button>
+                    <button class="qr-btn" id="copy-img">Copy</button>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+    </main>
     <footer class="footer">
         &copy; 2025 ratn.dev — All rights reserved.
     </footer>
